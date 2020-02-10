@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Pacifico';
+}
+.circular-reveal {
+  width: 256px;
+  height: 256px;
+  border-radius: 50%;
+  overFlow: hidden;
+  cursor: pointer;
+}
+.circular-reveal img{
+  width: 100%;
+}
+.circular-reveal::after {
+  content: "TheCoderGuru";
+  position: absolute;
+  background: rgba(149,116,215,0.214);
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+ display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-top: 50px;
+  font-size: 30px;
+  transition: transform 0.2s cubic-bezier(0, 0, 0.3, 1),
+    opacity 0.2s cubic-bezier(0, 0, 0.3, 1);
+  transform: rotate(50deg);
+  opacity: 0;
+  color: blue;
+}
+
+.circular-reveal:hover::after {
+  transform: rotate(0deg);
+  opacity: 1;
+}
